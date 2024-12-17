@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100;
+  }
+  header {
+    @apply bg-slate-800 shadow-md;
+  }
+  nav {
+    @apply p-5 max-w-screen-lg mx-auto flex items-center justify-between *:space-x-6 *:flex *:items-center;
+  }
+  main {
+    @apply max-w-screen-lg min-h-screen mx-auto p-5;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+    @apply block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-1 focus:ring-inset focus:ring-indigo-600 bg-white;
+  }
+  label {
+    @apply block text-sm font-medium leading-6 text-slate-500 first-letter:capitalize;
+  }
+  table {
+    @apply w-full text-sm text-left rounded-md shadow-lg overflow-hidden mb-6 table-auto bg-white;
+  }
+  thead {
+    @apply text-xs uppercase font-medium border-b border-slate-100 text-slate-600;
+  }
+  tbody tr {
+    @apply hover:bg-slate-100 w-full p-0;
+  }
+  th {
+    @apply px-6 py-4;
+  }
+  td {
+    @apply px-6 py-4 border-b border-slate-100;
+  }
+  footer {
+    @apply w-full mx-auto bg-slate-600 text-slate-300 text-xs py-6 px-16 flex items-center justify-between *:space-x-6 *:flex *:items-center;
+  }
+}
+
+@layer components {
+  .container {
+    @apply p-6 rounded-lg shadow-lg bg-white mx-auto;
+  }
+  .btn-primary {
+    @apply text-white bg-indigo-600 px-14 py-1.5 rounded-md shadow-sm hover:bg-indigo-700 active:ring-2 ring-offset-1 ring-indigo-700 disabled:bg-slate-300 disabled:text-slate-100 disabled:cursor-not-allowed;
+  }
+  .text-link {
+    @apply text-sm text-indigo-600 hover:text-indigo-700 underline;
+  }
+  .nav-link {
+    @apply text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium;
+  }
+  .nav-link-active {
+    @apply bg-slate-700;
+  }
+  .title {
+    @apply mb-6 text-center text-3xl font-bold leading-9 text-slate-900;
+  }
+  .error {
+    @apply text-xs text-red-500 mt-1;
+  }
+  .avatar {
+    @apply w-8 h-8 rounded-full overflow-hidden object-center object-cover;
+  }
+  .round-btn {
+    @apply w-8 h-8 overflow-auto rounded-full bg-slate-100 focus:outline-none focus:ring-1 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-slate-800;
+  }
+}
